@@ -1,65 +1,37 @@
-# Site settings
-title: 小崔的博客
-tagline: 
-email: cjw624923@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Hi, I'm a Web Developer, 热爱ROR开发, HTML CSS Javascript学习, 目标成为一名Full Stack Developer.
-baseurl: "" # the subpath of your siimte, e.g. /blog/
-url: "https://linchuanxu.github.io" # the base hostname & protocol for your site
-logourl: /assets/images/logo.png # Site logo
-author: "XiaoCui"
-author_thumbnail: "/assets/images/avatar.jpg" # Author avatar
-# Theme customization - please change from the defaults!
-theme:
-  # Color for sidebar bar, links, etc
-  highlight_color: "#205081" #205081" # "#272935"
-  # Social media links, leave blank to ignore
-  social: 
-    github: linchuanXu
-    twitter: linchuanXu
-    facebook: linchuanXu
-    gplus: +linchuanXu
-    # dribble: gayanvirajith
-    pinterest: linchuanXu
-
-  # Enable share buttons on post footer
-  show_share_buttons: true
-
-  # Show author picure, name and social links on post footer
-  show_author_info: true
-
-  # Disqus comments manager - shortname
-  disqus_shortname: linchuanXu
-
-  # Google Analytics/Webmaster key, leave blank to ignore
-  google_analytics_key: 
-  google_webmaster_key: 
-
-# Build settings
+permalink: /blog/:year/:month/:title.html 
+include: ['.htaccess']
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "CNAME", "Gemfile", "Gemfile.lock"]
 markdown: kramdown
-gems: [jekyll-paginate]
-# Permalinks
-permalink:        pretty
+highlights: pygments
+url: 
+cdn_url: 7u2t01.com1.z0.glb.clouddn.com
+lsi: false
+safe: true
+timezone: Asia/Shanghai
+auto: false 
 
-# Pagination config
-paginate: 5
+paginate: 8
+paginate_path: "page:num"
 
-# Files/Folders to be excluded from generated _site folder
-exclude: 
-  - CNAME
-  - Gemfile
-  - Rakefile
-  - README.md
-  - .gitignore
-  - .sass-cache
-  - Gemfile.lock
+kramdown:
+  auto_ids: true,
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
 
-# Sass conversion configs
+JB :
+  IMAGE_PATH : http://linchuanXu.github.io/images
 
-sass:
-  css_dir: assets/css
-  sass_dir: assets/css/_sass
-  style: :compressed
+# presonal config
+domain: http://linchuanXu.github.io
+title: Lippi-浮生志
+description: Draw my life with code
+author: Lippi.OuYang
+email: ouyanglip@gmail.com
+github: linchuanXu
 
-
-
+config:
+  js_dir:
+  img_dir:
+  css_dir:

@@ -1,112 +1,124 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->  
-  <head>
-    <title></title>
-
-    <meta charset="utf-8">
-    {% comment %}
-    <!-- Enable responsiveness on mobile devices-->
-    {% endcomment %}
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{% if page.browser_title %}{{ page.browser_title }}{% elsif page.title %}{{ page.title | append: ' - ' | append: site.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-    <meta name="description" content="{% if page.meta_description %}{{ page.meta_description }}{% else %}{{ site.description }}{% endif %}">
-    {% include open-graph.html %}
+<html lang="en">
   
-    {% comment %}
-    The meta tag below is useful when you want to verify the website to 
-    Google web-master tools in an alternative way. Simply configure your site verification key on
-    _config.yml given by Google web-master tools.
-    {% endcomment %}
+  <head>
+    <meta name="baidu-site-verification" content="HvuxptDcq6" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ page.title }} - {{ site.title }} - {{ site.author }}({{ site.email }})">
+    <title>
+      {{ page.title }} - {{ site.title }}
+    </title>
+    <!-- Bootstrap Core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS 
+    <link href="/css/blog.css" rel="stylesheet">-->
+    <!-- index css -->
+    <link href="/css/index.css" rel="stylesheet">
+	<!-- pagments CSS-->
+	<link href="/css/pygments.css" rel="stylesheet">
+        <!-- jQuery Version 1.11.0 -->
+    <script src="/js/jquery-1.11.0.js"> </script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+   <!-- 回到顶部js-->
+    <script src="/js/index.js"></script>
 
-    {% if site.theme.google_webmaster_key %}
-    <meta name="google-site-verification" content="{{ site.theme.google_webmaster_key }}" />
-    {% endif %}
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?085fc257cb1e774f7764a2cf527c393d";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
 
-    <link rel="alternate" type="application/rss+xml" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="prefetch" href="{{ site.url }}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="stylesheet" 
-    href="{{ 'http://gayan.me/gaya/assets/css/main.css' }}">
+	<script>
+    (function(){
+     var bp = document.createElement('script');
+	 bp.src = '//push.zhanzhang.baidu.com/push.js';
+	 var s = document.getElementsByTagName("script")[0];
+	 s.parentNode.insertBefore(bp, s);
+	 })();
+	</script>
 
-    <!-- IE Fixes -->
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    {% include style.html %}
   </head>
+  
   <body>
-    {% include sidebar.html %}
-    <div class="main-wrapper">
-      <div class="header">
-        <div class="container">
-          <div class="header-logo">{% include logo.html %}</div>
-          <div class="header-title">
-            <a href="{{ '' | prepend: site.baseurl | prepend: site.url | append: '/' }}" 
-              title="{{ site.title }}"> 
-              <h4>{{ site.title }}<small>{{ site.tagline }}</small></h4>
-            </a>
-          </div>        
-        </div>  
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">
+              Toggle navigation
+            </span>
+            <span class="icon-bar">
+            </span>
+            <span class="icon-bar">
+            </span>
+            <span class="icon-bar">
+            </span>
+          </button>
+          <a class="navbar-brand" href="/index.html">
+            {{ site.title }}
+          </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          {% include navigation.html %} 
+        </div>
+        <!-- /.navbar-collapse -->
       </div>
-      
-      <div class="container content">
+      <!-- /.container -->
+    </nav>
+    <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-md-8">
           {{ content }}
+        </div>
+
+	 <div id="top" data-toggle="tooltip" data-placement="left" title="回到顶部">
+	      <a href="javascript:;">
+		<div class="arrow"></div>
+		<div class="stick"></div>
+	      </a>
+	    </div>
+
+        <!-- Blog Sidebar Widgets Column -->
+        <div class="col-md-4">
+          <!-- Blog Search Well -->  
+	
+            {% include search.html %}
+          <!-- Blog Categories Well -->
+              {% include categories.html %} 
+         
+              {% include hot.html %} 
+       
+            {% include links.html %} 
+
+          <!-- Side Widget Well -->
+           
+        </div>
       </div>
-      <a href="#0" class="wc-top">Top</a>
-      
+
+
+
+      <!-- /.row -->
+      <hr>
+      <!-- Footer -->
+      <footer>
+           {% include copyright.html %} 
+              {% include analytics.html %} 
+
+      </footer>
     </div>
-
-    <label for="sidebar-checkbox" class="sidebar-toggle">
-      <span></span>
-    </label>
-
-    <script type="text/javascript">
-      var config = {
-        "browser_warning_page": "{{ '/browser-warning/' | prepend: site.baseurl | prepend: site.url }}",
-        "disqus_shortname": "{{ site.theme.disqus_shortname }}"
-      };
-      /* Browser support detection */
-      var browserSupport = (function(){
-        var htmlElemClasses = document.querySelector('html').className.split(' ');
-        for ( var i = 0; i < htmlElemClasses.length; i += 1 ){
-          var className = htmlElemClasses[i];
-          if ( className === 'lt-ie9' ){
-            return true;
-          }
-        }
-      }());
-
-      if (browserSupport){
-        window.location="{{ '/browser-warning/' | prepend: site.baseurl | prepend: site.url }}";
-      }
-
-      /* To avoid render blocking css */
-      var cb = function() {
-        var l = document.createElement('link'); l.rel = 'stylesheet';
-        l.href = 'http://fonts.googleapis.com/css?family=PT+Sans';
-        var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-      };
-      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-          webkitRequestAnimationFrame || msRequestAnimationFrame;
-      if (raf) raf(cb);
-      else window.addEventListener('load', cb);
-
-
-    </script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script async type="text/javascript" src="{{ '/assets/js/gaya.min.js' | prepend: site.baseurl | prepend: site.url }}"></script>
-    
-    {% comment %} Google Analytics {% endcomment %}
-    {% include google-analytics.html %}   
+    <!-- /.container -->
   </body>
+
 </html>

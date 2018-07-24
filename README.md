@@ -1,133 +1,47 @@
-# Gaya Jekyll Theme
+### 博客地址
 
-Modern responsive theme made for jekyll blogging platform. 
-Gaya is a simple theme build from ground up with the focus of performance. 
-The theme itself quickly adapts to the users device, so it looks great on 
-smartphones, tablets, desktops or even the large monitors.
+Github托管的是以前Jekyll版本的源码，现在博客用Hexo重新搭建
+#### 预览
 
-- Ability to change theme color at any time with any color.
-- Easy customizable menu navigation.
-- SEO Friendly
-- Embed image, YouTube/Vimeo video or SoundCloud audio to your post.
+* Jekyll版本：EZLippi.github.io
+* Hexo 版本： [www.ezlippi.com](http://www.ezlippi.com)
+* Hexo版本源码：[https://coding.net/u/ezlippi/p/ezlippi/git/tree/coding-pages/](https://coding.net/u/ezlippi/p/ezlippi/git/tree/coding-pages/)
 
----
+### 使用Jekyll版本作为博客模板，仅需如下几步：
 
-![Theme preview](http://gayan.me/thumbnails/gaya-jekyll-theme-preview-590x300.png "Gaya jekyll theme")
+1. 首先Fork或Download一份本项目代码。 
+2. 修改_config.yaml及about.md文件，以变更个人信息。 
+3. 修改_include目录下相关文件，以配置网站统计(analytics.html)，网友评论(comment.html)，右侧栏目(categories.html),热门文章(hot.html),友情链接(links.html)等。 
+4. 修改CNAME文件，以绑定自己的域名。 
+5. 删除_posts下文章，换成你自己的。 
+6. 去谷歌自定义搜索新建一个你的搜索引擎，把你的Id替换根目录下search.html我的ID
+7. 最后，push到你自己的博客Repo~ 
 
-### Need Help?
+ *^_^*如果愿意，Star本项目一个吧~ 
 
-Please submit as an 
-[issue](https://github.com/web-create/harmony/issues/new), I am happy 
-to response back.
+### 本项目使用了
 
-## How to install/run
+1. CNZZ的网站统计服务，官网：http://cnzz.com 
+2. 多说的评论功能，官网:http://duoshuo.com/
 
-1. [Fork](https://github.com/gayanvirajith/gaya) this repository.
-2. Clone it: git clone https://github.com/YOUR-USERNAME/gaya.
-3. If you completely new to jekyll, please read more about [Jekyll](http://jekyllrb.com/) and [Github pages](https://help.github.com/articles/using-jekyll-with-pages).
-4. Change your directory into cloned repository. 
-5. Run `bundle install`
-6. Edit the _config.yml on root directory. Change `url` property to to 
-`http://127.0.0.1:4000` since you are going to run on localhost.
-7. Run the jekyll server by having: `bundle exec jekyll serve --baseurl ''` or `rake preview`   
+### 联系方式
 
-Try to locate your browser at [http://localhost:4000](http://localhost:4000).
-
-Note: If you are a windows user please refer this nice website - http://jekyll-windows.juthilo.com/ by Julian Thilo to configure ruby + jekyll on windows.
+联系方式： Email(ouyanglip@gmail.com) 
 
 
->>>>>>> master
-## Theme options and configurations
+### 使用本项目作模板的博客链接
 
-Following options can be seen within the file `_config.yml`. More information 
-about configuration can be found on the [Jekyll Documentationn][jekyll]
+* http://www.94geek.com  
+* http://www.haidaoxiaofei.me  
+* http://www.malphi.net  
+* http://happyaround.com  
+* http://tencentlocation.github.io  
+* http://wtaps.github.io 
+* http://maoshu.cc
+* http://x-carto.com/
+* http://flypeom.site
 
-### General settings
+## 2016-02-25更新
 
-| Property name | Description  |
------------- | -------------
-`title` | The title of your blog shown in the site header along with the logo.
-`tagline` | The site tagline also shown in the site header along with the title.
-`email` | The email address associated with blog/site.
-`description` | The site description used to show author's/site's description in the top of the sidebar.
-`baseurl` | The subpath of your site, e.g. /blog/. More information can be found in the [Jekyll Documentationn][jekyll].
-`url` | The base host name & protocol for your site. More information can be found in the [Jekyll Documentationn][jekyll].
-`logourl` | Path to main logo image.
-`author_thumbnail` | Path to author's thumbnail image. 
-`author` | Name of the author.
-`paginate` | Number of posts to show per page, More information can be found in the [Jekyll Documentationn][jekyll].
-
-### Social profile links
-
-| Property name | Description  |
------------- | -------------
-`github` | GitHub link (Leave empty to exclude)
-`twitter` | Twitter link (Leave empty to exclude)
-`facebook` | Facebook link (Leave empty to exclude)
-`gplus` | Google plus link (Leave empty to exclude)
-`dribble` | Dribble link (Leave empty to exclude)
-`pinterest` | Pinterest link (Leave empty to exclude)
-
-### Theme settings
-
-| Property name | Description  |
------------- | -------------
-`highlight_color` | The main highlight/theme color of the site. You can put any color as a hex color. The configured color will be applied to sidebar, anchor links, buttons etc.
-`show_share_buttons` | Set as True/False to enable or disable Post share option.
-`show_author_info` | Set as True/False to enable or disable the author information on a post.
-`disqus_shortname` | Disqus Short name for Disqus comments. Leave empty to disable comments.
-`google_analytics_key` | Enter your Google analytics tracking ID to enable analytic support.
-`google_webmaster_key` | Enter your Google web-master verification key to verify your site with the web-master tool. (This is an alternative way of verifying your site with the web-master tool, the general way is to upload a file to your server.)
-
-
-### Page level configurations
-
-These configurations can be found within the top section of the each page, see the a post under `_posts` directory for example. 
-
-| Property name | Description  |
------------- | -------------
-`banner_image` | Specify the image name eg: `sample-banner-image-1.jpg` for banner image for the post. Jekyll system tries to locate the image under `assets/images`. So make sure you place all banner images under assets/images.
-`banner_video` | If you want to embed `Youtube/Vimeo` Video or `SoundCloud` audio, Specify the resource within single quotes. Please have a look on example post in `_posts/2014-12-14-what-is-nodejs.md` to see how we embed YouTube video. 
-`comments` | Set as True/False, if false will disable comments for current page/post.
-`browser_title` | SEO property.  Use this property if you want to display different browser title other than default page title. Please have a look on example post under `_posts/2014-12-14-what-is-nodejs.md` to see how we used the property.
-`meta_description` | SEO property. Use this property If you want to have unique meta description for each post. See the example post on `_posts/2014-12-14-what-is-nodejs.md` to see how we used the property.
-
-### Sidebar navigation configurations
-
-As jekyll supports data files, **Gaya** theme uses `YAML` [data file][df] to load sidebar navigation items. You could find the `main-nav.yaml` data file under `_data/` directory. You could add any number of menu items by modifying `main-nav.yaml`. 
-
-An example of `main-nav.yaml`:
-
-```
-- title: "About me" # Title/Caption of the menu item
-  href: "/about" # the page where it pointed
-- title: "Blog Archive"
-  href: "/archive"
-```
-
-At some point you want to link an external URL, in that case you could edit the `_includes/sidebar.html` file. See the following example:
-
-```
-<nav class="sidebar-nav">
-   <a class="sidebar-nav-item" 
-      href="http://www.example.com"
-      target="_blank">
-      Example site
-    </a>
-</nav>
-```
-
-## License
-
-(The MIT License)
-
-Copyright (c) 2014 Gayan Virajith
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-[jekyll]: http://jekyllrb.com
-[df]: http://jekyllrb.com/docs/datafiles/
+* 本博客由Jekyl迁移到Hexo,博客地址[ezlippi](www.ezlippi.com),源码托管在了国内的[Coding.net](https://coding.net/u/ezlippi/p/ezlippi/git/tree/coding-pages/)
+* 使用Hexo搭建个人博客具体教程参考[Jekyll迁移到Hexo建立个人博客](http://www.ezlippi.com/blog/2016/02/jekyll-to-hexo.html)
