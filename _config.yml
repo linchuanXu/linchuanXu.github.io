@@ -4,8 +4,8 @@ tagline:
 email: cjw624923@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Hi, I'm a Web Developer, 热爱ROR开发, HTML CSS Javascript学习, 目标成为一名Full Stack Developer.
-baseurl: "https://linchuanxu.github.io" # the subpath of your siimte, e.g. /blog/
-#url: "https://linchuanxu.github.io" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your siimte, e.g. /blog/
+url: "https://linchuanxu.github.io" # the base hostname & protocol for your site
 logourl: /assets/images/logo.png # Site logo
 author: "XiaoCui"
 author_thumbnail: "/assets/images/avatar.jpg" # Author avatar
