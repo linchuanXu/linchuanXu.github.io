@@ -1,30 +1,37 @@
 ---
-layout: default
-title: "关于：About"
+layout: page_with_comment
+title: About
+permalink: /about/
+comments: false
+author_footer: false
 ---
 
-## 个人简介：
+## 个人信息
 
-* 欧阳利平
-* Web后台开发、Android应用开发爱好者
-* 来自江西 现居广州
+Xzh, 99, beijing
 
-## 联系方式
+- 我想知道我会死在那里，这样我就可以永远不去那个地方 
 
-<p class="contact">
- <a href="http://weibo.com/ouyanglip" title="微博联系我"><img src="http://www.sinaimg.cn/blog/developer/wiki/LOGO_32x32.png" width="24" height="24" style="display:inline-block;vertical-align:middle"></a><br/>
-        <a href="http://www.zhihu.com/people/lippi-ouyang" title="知乎联系我"><img src="http://www.zhihu.com/favicon.ico" width="24" height="24" style="display:inline-block;vertical-align:middle"></a><br/>
- <a href="https://github.com/LippiOuYang" title="Github联系我"><img src="http://www.github.com/favicon.ico" width="24" height="24" style="display:inline-block;vertical-align:middle"></a><br/>
-邮箱: ouyanglip@gmail.com 
-</p>
+* 个人宪法至上主义者
 
-### 关于本站：
+## 参与项目
 
-* 搭建于[Github](https://github.com/LippiOuYang/LippiOuYang.github.io),欢迎Fork
-* 模板及样式来源[Useful Paradigm](http://usefulparadigm.com/)
-* 折腾开始于2014年6月1日，基本在2014年6月15日完工。
+- 会有的
 
-## 其他流言
-* 未**女昏**人士；
-* 阿森纳球迷；
-* 实况足球忠实粉丝；
+
+## 关于本站
+
+基于 jekyll，后端工程师搭博客的神器。让大家可以使用简洁的 markdown 语法，  
+在 vim 编辑器里码出自己的文字，然后 push 到 github 上直接发布，nice！   
+感谢jekyll的作者，一个不可思议的轮子。
+
+## 相关链接
+[博客源码][] - 如果喜欢这个博客模板，欢迎 fork 使用！
+ 
+
+[博客源码]: https://github.com/dongyado/dongyado.github.io
+[Jcseg@github]: https://github.com/lionsoul2014/jcseg
+[Jcseg@osc]: http://git.oschina.net/lionsoul/jcseg
+[ip2region@github]: https://github.com/lionsoul2014/ip2region
+[ip2region@osc]: http://git.oschina.net/lionsoul/ip2region
+[friso@github]: https://github.com/lionsoul2014/friso
