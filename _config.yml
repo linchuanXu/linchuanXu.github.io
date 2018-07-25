@@ -1,37 +1,34 @@
-permalink: /blog/:year/:month/:title.html 
-include: ['.htaccess']
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "CNAME", "Gemfile", "Gemfile.lock"]
+# Site settings
+title: 我想知道我会死在哪里
+author: X
+author_avatar: /images/header.jpg
+email: 1171001052@cnu.edu.cn
+description: 生命不止，折腾不息 
+url: "https://linchuanxu.github.io"
+domain: "https://linchuanxu.github.com"
+github_username: linchuanxu
+github_site_repo: linchuanxu
+disqus: X
+
+
+# Build settings
+highlighter: rouge
 markdown: kramdown
-highlights: pygments
-url: 
-cdn_url: 7u2t01.com1.z0.glb.clouddn.com
-lsi: false
-safe: true
-timezone: Asia/Shanghai
-auto: false 
-
-paginate: 8
-paginate_path: "page:num"
-
 kramdown:
-  auto_ids: true,
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  use_coderay: false
+    syntax_highlighter: rouge
+    extensions: ["fenced_code_blocks", "autolink", "tables", "smart"]
 
-JB :
-  IMAGE_PATH : http://linchuanXu.github.io/images
+sass:
+    style: :compressed
+    sass_dir: _sass
 
-# presonal config
-domain: http://linchuanXu.github.io
-title: Lippi-浮生志
-description: Draw my life with code
-author: Lippi.OuYang
-email: ouyanglip@gmail.com
-github: linchuanXu
+permalink: pretty
+excerpt_separator: "<!-- more -->"
 
-config:
-  js_dir:
-  img_dir:
-  css_dir:
+# path
+categories_path: categories/
+tags_path: tags/
+
+
+gems:
+  - jekyll-sitemap
