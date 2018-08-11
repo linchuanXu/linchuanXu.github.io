@@ -28,4 +28,4 @@ meta:
 
 ​	反正整个过程有镜头转移，有上帝视角，身份是主角，适合自己的真实身份，小一点吧，最佳OB位。应该是我想看末日美剧了，然后就这么在梦里看了一波，还挺刺激。。。
 
-![2018-08-11-monster](\images\post\2018-08-11-monster.jpg)
+![2018-08-11-monster](https://img3.doubanio.com/view/photo/l/public/p2248573935.webp)
