@@ -70,43 +70,47 @@ def generate_filename(post_data):
     cleaned_title = re.sub(r'\s+', '-', cleaned_title).lower()[:50]
     return f"{post_data['date']}-{cleaned_title}.md"
 
+
+def generate_readme(articles):
+    """生成或更新README.md文件，包含所有文章的链接"""
+    readme_path = "README.md"  # 直接放到当前目录
+    with open(readme_path, 'w', encoding='utf-8') as f:
+        f.write("# 文章目录\n\n")
+        f.write("以下是本站所有文章的目录，点击标题即可阅读全文：\n\n")
+        for article in articles:
+            f.write(f"- [{article['title']}]({article['url']}) - {article['date']}\n")
+        f.write("\n\n---\n\n*本目录自动生成，最后更新时间：{}*".format(datetime.now().strftime('%Y-%m-%d %H:%M:%S')))
+
 def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     
     article_urls = parse_sitemap(SITEMAP_URL)
     print(f"Found {len(article_urls)} articles")
     
-    existing_files = set(os.listdir(OUTPUT_DIR))
+    articles = []  # 用于存储所有文章信息，用于生成README.md
     
     for idx, url in enumerate(article_urls):
         print(f"Processing {idx+1}/{len(article_urls)}: {url}")
-        
-        # 生成临时文件名用于检查
-        temp_data = {'title': url.split('/')[-1], 'date': '2000-01-01'}
-        temp_filename = generate_filename(temp_data)
-        if any(url.split('/')[-1] in f for f in existing_files):
-            print(f"  → 已存在，跳过")
-            continue
             
         post_data = extract_content(url)
         if not post_data: continue
         
-        filename = generate_filename(post_data)
-        if filename in existing_files:
-            print(f"  → 文件已存在: {filename}")
-            continue
-            
         # 构建完整内容
         full_content = generate_front_matter(post_data)
         full_content += f"## {post_data['title']}\n\n"
         full_content += f"{BeautifulSoup(post_data['content'], 'html.parser').text[:500]}...\n\n"
         full_content += f"**阅读完整文章**: [{post_data['title']}]({post_data['url']})"
         
-        # 保存文件
+        # 保存文章文件
+        filename = generate_filename(post_data)
         with open(os.path.join(OUTPUT_DIR, filename), 'w', encoding='utf-8') as f:
             f.write(full_content)
         
-        existing_files.add(filename)
+        # 将文章信息添加到列表中
+        articles.append(post_data)
+    
+    # 生成README.md
+    generate_readme(articles)
     
     print(f"生成完成，文件保存在 {OUTPUT_DIR}")
 
